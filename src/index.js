@@ -1,11 +1,11 @@
 const { app } = require("./express");
-// const {
-//   getAllUsers,
-//   getUserById,
-//   insertUser,
-//   deleteUser,
-//   updateUserId
-// } = require("./users");
+const {
+  getAllUsers,
+  getUserById,
+  insertUser,
+  deleteUser,
+  updateUserId
+} = require("./users");
 const {
   registerUser,
   authenticateUser,
@@ -15,15 +15,15 @@ const {
 
 const { insertData, getAllData } = require("./user-details");
 
-// app.post("/createUser", insertUser);
+app.post("/createUser", insertUser);
 
-// app.get("/allUsers", getAllUsers);
+app.get("/allUsers", getAllUsers);
 
-// app.get("/getUser", getUserById);
+app.get("/getUser", getUserById);
 
-// app.put("/updateUser", updateUserId);
+app.put("/updateUser", updateUserId);
 
-// app.delete("/deleteuser", deleteUser);
+app.delete("/deleteuser", deleteUser);
 
 app.post("/register", registerUser);
 
